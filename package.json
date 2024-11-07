@@ -1,0 +1,67 @@
+{
+	"name": "@qsocket/transport-engine.io-client-latest",
+	"description": "A wrapper for the latest engine.io-client version, designed for @qsocket/core, offering updated client transport support for qsocket applications.",
+	"version": "0.0.1",
+	"keywords": [
+		"qsocket",
+		"qsocket/core",
+		"qsocket/framework",
+		"engine.io-client",
+		"latest",
+		"websocket",
+		"wrapper"
+	],
+	"author": "Pobedinskiy David (qpyracuk) <qpyracuk@gmail.com>",
+	"license": "MIT",
+	"type": "module",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"exports": {
+		".": {
+			"require": "./dist/index.cjs",
+			"import": "./dist/index.js"
+		},
+		"./package.json": "./package.json"
+	},
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist",
+		"README.md",
+		"LICENSE"
+	],
+	"scripts": {
+		"dev": "tsup ./src/index.ts --watch --onSuccess \"node ./dist/index.js\"",
+		"start": "node ./dist/index.js",
+		"build": "tsup",
+		"build:types": "dts-bundle-generator -o dist/index.d.ts src/index.ts",
+		"lint": "eslint \"**/*.{ts,tsx}\"",
+		"lint:fix": "eslint \"**/*.{ts,tsx}\" --fix --color",
+		"format": "prettier --write src/"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/qsocket-js/qsocket-transport-engine.io-client-latest.git"
+	},
+	"bugs": {
+		"url": "https://github.com/qsocket-js/qsocket-transport-engine.io-client-latest/issues"
+	},
+	"homepage": "https://github.com/qsocket-js/qsocket-transport-engine.io-client-latest#readme",
+	"dependencies": {
+		"engine.io": "^6.6.2"
+	},
+	"devDependencies": {
+		"@types/eslint-config-prettier": "^6.11.3",
+		"@typescript-eslint/eslint-plugin": "^8.13.0",
+		"@typescript-eslint/parser": "^8.13.0",
+		"@types/node": "^22.9.0",
+		"eslint": "^9.14.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.2.1",
+		"prettier": "^3.3.3",
+		"tsup": "^8.3.5",
+		"typescript": "^5.6.3"
+	},
+	"engines": {
+		"node": ">=10.2.0"
+	}
+}
