@@ -1,7 +1,7 @@
 {
 	"name": "@qsocket/transport-engine.io-client-latest",
 	"description": "A wrapper for the latest engine.io-client version, designed for @qsocket/core, offering updated client transport support for qsocket applications.",
-	"version": "0.0.1-alpha",
+	"version": "0.0.1-beta",
 	"keywords": [
 		"qsocket",
 		"qsocket/core",
@@ -33,11 +33,9 @@
 		"dev": "tsup ./src/index.ts --watch --onSuccess \"node ./dist/index.js\"",
 		"start": "node ./dist/index.js",
 		"build": "tsup",
-		"build:types": "dts-bundle-generator -o dist/index.d.ts src/index.ts",
 		"lint": "eslint \"**/*.{ts,tsx}\"",
 		"lint:fix": "eslint \"**/*.{ts,tsx}\" --fix --color",
-		"format": "prettier --write src/",
-		"publish": "npm publish --access public"
+		"format": "prettier --write src/"
 	},
 	"repository": {
 		"type": "git",
@@ -54,10 +52,10 @@
 		}
 	],
 	"dependencies": {
-		"engine.io-client": "6.6.2"
+		"engine.io-client-latest": "npm:engine.io-client@6.6.2"
 	},
 	"peerDependencies": {
-		"engine.io-client": "6.6.2"
+		"engine.io-client-latest": "npm:engine.io-client@6.6.2"
 	},
 	"devDependencies": {
 		"@types/eslint-config-prettier": "^6.11.3",
