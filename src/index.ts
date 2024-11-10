@@ -61,6 +61,12 @@ export default engine;
 export const QSocketTransportEIOClientLatestSocket: typeof Socket = Socket;
 
 /**
+ * `IQSocketTransportEIOClientLatestSocket` is a type alias for the `Socket` class from `engine.io-client-latest`.
+ * This type represents an individual client connection to the Engine.IO server.
+ */
+export type IQSocketTransportEIOClientLatestSocket = Socket;
+
+/**
  * `IQSocketTransportEIOClientLatestSocketOptions` represents options for configuring the Engine.IO client socket,
  * allowing customization of connection and data transfer settings.
  */

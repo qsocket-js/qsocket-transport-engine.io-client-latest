@@ -1,7 +1,7 @@
 {
 	"name": "@qsocket/transport-engine.io-client-latest",
 	"description": "A wrapper for the latest engine.io-client version, designed for @qsocket/core, offering updated client transport support for qsocket applications.",
-	"version": "0.0.1-beta",
+	"version": "0.0.1-rc",
 	"keywords": [
 		"qsocket",
 		"qsocket/core",
